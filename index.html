@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Badminton Cost Split</title>
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Split badminton costs fairly among players." />
+
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🏸 Badminton Cost Split</h1>
+
+    <label for="players">Number of players</label>
+    <select id="players" name="players"></select>
+
+    <label for="shuttles">Amount of shuttlecocks used</label>
+    <select id="shuttles" name="shuttles"></select>
+
+    <label for="shuttlePrice">Price per shuttlecock</label>
+    <input id="shuttlePrice" name="shuttlePrice" type="number" min="0" step="1" inputmode="decimal" />
+
+    <label for="courtPrice">Price for the court</label>
+    <input id="courtPrice" name="courtPrice" type="number" min="0" step="1" inputmode="decimal" />
+
+    <section class="result" aria-live="polite">
+      <p>Total cost: <strong id="totalCost">0.00</strong> THB</p>
+      <p>Each player pays: <strong id="perPlayer">0.00</strong> THB</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
